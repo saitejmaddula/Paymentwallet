@@ -1,0 +1,58 @@
+doctype html
+html
+    head
+        title Page Title
+        style.
+            body {
+                background-color: black;
+                text-align: center;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+    body
+        br
+        br
+        br
+        br
+        br
+        br
+        .creditCardForm
+            .heading
+                h1 Credit Card
+            .payment
+                form(action="/savedcard",method="post")
+                    #card-number-field.form-group
+                        label(for='cardNumber') Card Number
+                        input#cardNumber.form-control(type='text', name='cardNumber',value=dcardNumber,minlength=16,maxlength=16)
+                    #expiration-date.form-group
+                        label Expiration Date
+                        select(name=exm,value=dexm)
+                            option(value='01') January
+                            option(value='02') February
+                            option(value='03') March
+                            option(value='04') April
+                            option(value='05') May
+                            option(value='06') June
+                            option(value='07') July
+                            option(value='08') August
+                            option(value='09') September
+                            option(value='10') October
+                            option(value='11') November
+                            option(value='12') December
+                        select(name=exy,value=dexy)
+                            option(value='19')  2019
+                            option(value='20')  2020
+                            option(value='21')  2021
+                            option(value='22')  2022
+                            option(value='23')  2023
+                            option(value='24')  2024
+                            option(value='25')  2025
+                    .form-group.owner
+                        label(for='owner') name on card
+                        input#owner.form-control(type='text', name='NOC')
+                    .form-group.CVV
+                        label(for='cvv') CVV
+                        input#cvv.form-control(type='text', name='cvv' minlength=3 maxlength=3)
+                    br
+                    #pay-now.form-group
+                        button#confirm-purchase.btn.btn-default(type='submit') Save and Confirm

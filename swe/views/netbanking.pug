@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title Page Title
+        style.
+            body {
+                background-color: black;
+                text-align: center;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+    body
+        br
+        br
+        br
+        br
+        br
+        br
+        .NetBankingForm
+            .heading
+                h1 Net Banking
+            .payment
+                form()
+                    #Account-number-field.form-group
+                        label(for='AccountNumber') Account Number
+                        input#AccountNumber.form-control(type='number',minlength=11 ,maxlength=16)
+                    .form-group.IFSCCODE
+                        label(for='IFSCCODE') IFSC CODE
+                        input#IFSCCODE.form-control(type='text' ,minlength=8)
+                    .form-group.AccountHolderName
+                        label(for='AccountHolderName') Account Holder Name
+                        input#AccountHolderName.form-control(type='text' required)
+                    .form-group.Password
+                        label(for='Password') Password
+                        input#Password.form-control(type='password', minlength=8)
+                    br
+                    #pay-now.form-group
+                        button#confirm-purchase.btn.btn-default(type='button',onclick="location.href = '/sucess'") Confirm

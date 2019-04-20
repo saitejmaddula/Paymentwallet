@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+        title Blog
+        // Bootstrap
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+        link(href='https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700', rel='stylesheet')
+        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.5.0/css/all.css', integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU', crossorigin='anonymous')
+        link(rel='stylesheet', href='./css/custom.css')
+        // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+        // WARNING: Respond.js doesn't work if you view the page via file://
+        //if lt IE 9
+          script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
+          script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+        style(type='text/css').
+    body
+        .container
+            .row
+                .col-xs-4.item-photo
+                    img(style='max-width:100%;', src='./images/case2.png')
+                .col-xs-5(style='border:0px solid gray')
+                    h3 EXOIC iPAKY 360 Degree protective slim fit case
+                    p
+                        | STYLISH, INTRODUCING OUR "360 DEGREE HARD CASE - ALL SIDES COVERAGE SERIES" - No Need of Bulky Cases Now ! This Amazing Case Protects Your Apple iPhone 6 From ALL SIDES without adding weight.
+                        | Superior Finish : This is not TPU which loosen the grace after some time. This is Hard Case with an Xtremely Thin Profile yet being Ultra Tough and highly durable due to the Eco Friendly High Density PolyCarbonate Used.
+                        | MATTE finish. Sweat and Fingerprint proof, Anti-dust, washable & tear-resistant.Features the Upper lip build design to help protect the screen when face down on a flat surface.
+                        | Industry Proven Quality Testing by our Eight Stage Reliability Test. Scratch Proof Coating for lasting Durability. Rubberised Hard Case UltraSmooth feel.
+                        | Apple iPhone 6 / Apple iPhone 6S Case
+                        | STYLUSH, INTRODUCING OUR "360 DEGREE HARD CASE - ALL SIDES COVERAGE SERIES" - No Need of Bulky Cases Now ! This Amazing Case Protects Your
+                        | Apple iPhone 6 / Apple iPhone 6S Case .
+                    h3(style='margin-top:0px;') 500/-
+                    form(action='/case2', method='post')
+                        select.form-control(style='margin-bottom: 20px;', name='quantity')
+                            option(value='0') Quantity  Selection
+                            option(value='1') 1
+                            option(value='2') 2
+                            option(value='3') 3
+                            option(value='4') 4
+                        .section(style='padding-bottom:20px;')
+                            input.btn.btn-primary(type='submit', role='button', value='Add to cart')
+        // jQuery (necessary for Bootstrap's JavaScript plugins)
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+        // Include all compiled plugins (below), or include individual files as needed
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')

@@ -1,0 +1,43 @@
+doctype html
+html
+    head
+        style.
+            body {
+                background-color: lightblue;
+            }
+            h2 {
+                color: white;
+                text-align: center;
+            }
+            body {
+                font-family: verdana;
+                font-size: 20px;
+            }
+            div {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 50px;
+            }
+    body
+        h2 sign up
+        div
+            center
+                form(action='/register', method='post')
+                    | name:
+                    br
+                    input(type='text', name='name', pattern='[A-z a-z]*', minlength='3', required='')
+                    br
+                    |  phone number:
+                    br
+                    input(type='text', name='phone', maxlength='10', pattern='[6789][0-9]{9}', minlength='10', required='')
+                    br
+                    |  E-mail:
+                    br
+                    input(type='email', name='email', required='')
+                    br
+                    |  User password:
+                    br
+                    input(type='password', name='psw', minlength='8')
+                    br
+                    br
+                    input(type='submit', value='Submit')

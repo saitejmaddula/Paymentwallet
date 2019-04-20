@@ -1,0 +1,12 @@
+doctype html
+html
+    head
+        script(type='text/javascript').
+            function Redirect()
+            {
+                window.location="/home";
+            }
+            document.write("You will be redirected to a home page in 3 seconds");
+            setTimeout('Redirect()', 3000);
+    body
+        img(src='/images/image.jpg', alt='No Image', width='1400', height='600')

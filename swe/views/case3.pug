@@ -1,0 +1,51 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+        title Blog
+        // Bootstrap
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+        link(href='https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700', rel='stylesheet')
+        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.5.0/css/all.css', integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU', crossorigin='anonymous')
+        link(rel='stylesheet', href='./css/custom.css')
+        // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+        // WARNING: Respond.js doesn't work if you view the page via file://
+        //if lt IE 9
+          script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
+          script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+        style(type='text/css').
+            }
+    body
+        .con
+        .container
+            .row
+                .col-xs-4.item-photo
+                    img(style='max-width:100%; height: 500px;', src='./images/earphone.png')
+                .col-xs-5(style='border:0px solid gray')
+                    h3 Ear Phones with mic(Blue)
+                    p
+                        | Innovative housing design enables for easy adjustment and optimal wearing comfort with powerful 10mm drivers for sonic clarity, bass-driven stereo sound and good attenuation of ambient noise
+                        | The noise-cancelling microphone enables trouble free receiving of calls or undeterred sessions of musical extravaganza
+                        | Made to fit you and your lifestyle, providing a smooth grip for an extra secure and comfortable fit for your ears
+                        | Passive noise cancellation feature enables users to enjoy listening to your music in a chaotic and noisy environment, it also enables users to receive calls on-the-go
+                        | Crafted with care, the polished metal ensures its longevity
+                        | The tangle-free cable is lightweight and features user-friendly controls for easy functioning
+                        | warranty : 1 Year
+                    h3(style='margin-top:0px;') 999/-
+                    form(action='/case3', method='post')
+                        select.form-control(style='margin-bottom: 20px;', name='quantity')
+                            option(value='0') Quantity  Selection
+                            option(value='1') 1
+                            option(value='2') 2
+                            option(value='3') 3
+                            option(value='4') 4
+                        .section(style='padding-bottom:20px;')
+                            input.btn.btn-primary(type='submit', role='button', value='Add to cart')
+        // jQuery (necessary for Bootstrap's JavaScript plugins)
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+        // Include all compiled plugins (below), or include individual files as needed
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')

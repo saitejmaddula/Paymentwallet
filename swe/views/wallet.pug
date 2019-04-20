@@ -1,0 +1,104 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+        title My Wallet
+        // Bootstrap
+        link(href='https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css', rel='stylesheet')
+        link(href='https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css', rel='stylesheet')
+        // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+        // WARNING: Respond.js doesn't work if you view the page via file://
+        //if lt IE 9
+          script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
+          script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+        style(type='text/css').
+            .row.marketing img {
+                min-height: 200px;
+                max-height: 200px;
+                overflow: hidden;
+            }
+            .row.marketing h4 {
+                text-transform: uppercase;
+                color: #fe3a38;
+                font-weight: bold;
+            }
+            footer.footer {
+                margin-top: 50px;
+                background: #d9e7e2;
+                padding: 15px;
+            }
+            .header.clearfix {
+                background: #d9e7e2;
+                padding: 18px;    margin-bottom: 40px;
+            }
+            body {
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-size: 14px;
+                line-height: 1.42857143;
+                color: #333;
+                background-color: #9dbcb1;
+            }
+            input[type=text] {
+                padding: 0;
+                height: 30px;
+                position: relative;
+                left: 0;
+                outline: none;
+                border: 1px solid #cdcdcd;
+                border-color: rgba(0, 0, 0, .15);
+                background-color: white;
+                font-size: 16px;
+            }
+            .advancedSearchTextbox {
+                width: 526px;
+                margin-right: -4px;
+            }
+    body
+        .container
+            .header.clearfix
+                nav
+                    ul.nav.nav-pills.pull-right
+                        li(role='presentation')
+                            a(href='/home') Home
+                        li.active(role='presentation')
+                            a(href='/wallet') Wallet
+                        li(role='presentation')
+                            a(href='/profile') Profile
+                h3.text-muted PAYMENT WALLET
+            h1 hello #{dname}
+            h1 My Money : Your Amount is #{dwallet}
+            br
+            br
+            br
+            form(method='post', action='/wallet')
+                center
+                    h3 Enter Amount :
+                    input.advancedSearchTextBox(type='number', name='amoney' min=10 max=10000 required)
+                    input(type='submit', value='ADD')
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            footer.footer
+                p © 2019 paytm Company, Inc.
+        // jQuery (necessary for Bootstrap's JavaScript plugins)
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+        // Include all compiled plugins (below), or include individual files as needed
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')

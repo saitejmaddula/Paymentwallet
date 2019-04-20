@@ -1,0 +1,135 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+        title My Wallet
+        // Bootstrap
+        link(href='https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css', rel='stylesheet')
+        link(href='https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css', rel='stylesheet')
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+        // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+        // WARNING: Respond.js doesn't work if you view the page via file://
+        //
+          if lt IE 9
+          script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
+          script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+        style(type='text/css').
+            .row.marketing img {
+                min-height: 200px;
+                max-height: 200px;
+                overflow: hidden;
+            }
+            .row.marketing h4 {
+                text-transform: uppercase;
+                color: #fe3a38;
+                font-weight: bold;
+            }
+            footer.footer {
+                margin-top: 50px;
+                background: #d9e7e2;
+                padding: 15px;
+            }
+            .header.clearfix {
+                background: #d9e7e2;
+                padding: 18px;
+                margin-bottom: 40px;
+            }
+            body {
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.42857143;
+                color: #333;
+                background-color: #9dbcb1;
+            }
+            input[type=text] {
+                padding: 0;
+                height: 30px;
+                position: relative;
+                left: 0;
+                outline: none;
+                border: 1px solid #cdcdcd;
+                border-color: rgba(0, 0, 0, .15);
+                background-color: white;
+                font-size: 16px;
+            }
+            .advancedSearchTextbox {
+                width: 526px;
+                margin-right: -4px;
+            }
+        script(type='text/javascript').
+            var strUser;
+            var tot;
+            function details()
+            {var e = document.getElementById("ddlViewBy");
+                strUser = e.options[e.selectedIndex].value;
+                strUser=parseInt(strUser);
+                var div = document.getElementById('pass');
+                div.innerHTML="";
+                div.innerHTML +=
+                    "<h3>Passenger details</h3><table class='table table-bordered'><thead><tr>";
+                div.innerHTML +=  "<th>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Age</th></tr</thead><br>";
+                var i;
+                for (i = 0; i <strUser; i++) {
+                    div.innerHTML += "<tr>Passenger"+(i+1)+"<td><input type='text' required></td><td><input type='number' required></td></tr><br>";
+                }
+                div.innerHTML+="</table>";
+                var unit=#{cost};
+                document.getElementById("total").value =unit*strUser;
+                tot=unit*strUser;
+            }
+            function Promo()
+            {
+                var f=document.getElementById("Promocode");
+                var g=f.options[f.selectedIndex].value;
+                g=parseInt(g);
+                var s=document.getElementById("total").value
+                s=tot-g;
+                document.getElementById("total").value =s;
+            }
+    body
+        .container
+            .header.clearfix
+                nav
+                    ul.nav.nav-pills.pull-right
+                        li(role='presentation')
+                            a(href='/home') Home
+                        li.active(role='presentation')
+                            a(href='/wallet') Wallet
+                        li(role='presentation')
+                            a(href='/profile') Profile
+                h3.text-muted PAYMENT WALLET
+            center
+                br
+                br
+                form(method='post', enctype='application/x-www-form-urlencoded', action='/booktickets')
+                    | No of tickets
+                    select#ddlViewBy(name='notic')
+                        option(value='0') Select
+                        option(value='1') 1
+                        option(value='2') 2
+                        option(value='3') 3
+                    input(type='button', onclick='details()', value='OK')
+                    br
+                    #pass.pass
+                    | Promocode
+                    select#Promocode
+                        option(value='0') Select Promo
+                        option(value='100') 100 OFF
+                        option(value='200') 200 OFF
+                    input(type='button', onclick='Promo()', value='ApplyPromo')
+                    br
+                    | Total cost
+                    input#total(type='text', readonly='', value='0', name='total')
+                    button(type='submit') PayNow
+                    p
+        // jQuery (necessary for Bootstrap's JavaScript plugins)
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+        // Include all compiled plugins (below), or include individual files as needed
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')

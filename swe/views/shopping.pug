@@ -1,0 +1,58 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+        title shopping
+        // Bootstrap
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+        link(href='https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700', rel='stylesheet')
+        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.5.0/css/all.css', integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU', crossorigin='anonymous')
+        link(rel='stylesheet', href='./css/custom.css')
+        // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+        // WARNING: Respond.js doesn't work if you view the page via file://
+        //if lt IE 9
+          script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
+          script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+        style(type='text/css').
+    body
+        .container
+            .row
+                .col-sm-12.col-md-12
+                    .header.clearfix
+                        .col-lg-6.col-md-6.col-sm-6.col-xs-12
+                            strong Welcome!!!!Happy Shopping
+                        .col-lg-6.col-md-6.col-sm-6.col-xs-12.text-right
+            .col-sm-12.col-md-12
+                .panel.panel-primary
+                    nav
+                        ul.nav.nav-pills.pull-right
+                            li.active(role='presentation')
+                                a(href='/home') Home
+                            li(role='presentation')
+                                a(href='/cart') Cart
+        .col-sm-6.col-md-6
+            .thumbnail
+                img(alt='100%x200', data-src='holder.js/100%x150', src='https://images.pexels.com/photos/248528/pexels-photo-248528.jpeg', data-holder-rendered='true', style='; width: 100%; display: block;')
+                .caption
+                    h3 Mobiles
+                    p
+                        | A mobile phone is a wireless handheld device that allows users to make and receive calls and to send text messages, among other features.
+                    p
+                        a.btn.btn-primary(href='/products', role='button') View Mobiles
+        .col-sm-6.col-md-6
+            .thumbnail
+                img(alt='100%x200', data-src='holder.js/100%x150', src='https://s.financesonline.com/uploads/audiotechnica-1024x768.jpeg', data-holder-rendered='true', style='; width: 100%; display: block;')
+                .caption
+                    h3 Accessories
+                    p
+                        | Best Buy has a wide selection of cell phone accessories including cases, chargers, cables, memory cards, adapters and more. You can shop by type of accessory or shop accessories by device.
+                    p
+                        a.btn.btn-primary(href='/products', role='button') View Accessories
+        // jQuery (necessary for Bootstrap's JavaScript plugins)
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+        // Include all compiled plugins (below), or include individual files as needed
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
